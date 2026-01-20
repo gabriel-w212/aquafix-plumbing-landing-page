@@ -3,182 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Northstar Accounting Services Hero</title>
+    <!-- Font Imports -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Base Styles */
-        .plumbing-problems-section {
-            background-color: #fcfcfc; /* Very light greyish-white */
-            font-family: 'Poppins', sans-serif;
-            padding: 80px 0;
+        :root {
+            --content-max-width: 1120px;
+            --primary-orange: #E67E22;
+            --primary-hover: #1F3A5F;
+            --whatsapp-green: #25D366;
+            /* Deep Bluish Luxury Overlay */
+            --overlay-color: rgba(15, 23, 42, 0.6); 
+        }
+
+        .poppins { font-family: 'Poppins', sans-serif; }
+        .inter { font-family: 'Inter', sans-serif; }
+
+        /* Full-width container logic with bluish overlay */
+        .hero-bg {
+            background: 
+                linear-gradient(90deg, var(--overlay-color) 0%, rgba(15, 23, 42, 0.2) 100%), 
+                url('http://northstar-accounting-services.local/wp-content/uploads/2026/01/North-star.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* 1120px content width constraint */
+        .content-container {
+            max-width: var(--content-max-width);
+            margin: 0 auto;
             width: 100%;
-            color: #333;
         }
 
-        .plumbing-container {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 0 20px;
-            box-sizing: border-box;
+        /* Custom Hover Transitions */
+        .btn-primary:hover {
+            background-color: var(--primary-hover) !important;
+            color: white !important;
         }
 
-        /* Header Styles */
-        .plumbing-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .plumbing-header h2 {
-            font-size: 38px;
-            font-weight: 700;
-            color: #1a365d;
-            margin-bottom: 20px;
-        }
-
-        .plumbing-header p {
-            font-size: 18px;
-            color: #555;
-            line-height: 1.7;
-            max-width: 750px;
-            margin: 0 auto;
-        }
-
-        /* Icon List Container */
-        .plumbing-list-wrapper {
-            background: #ffffff;
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
-            border: 1px solid #f0f0f0;
-        }
-
-        .plumbing-icon-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 Columns for desktop */
-            gap: 30px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        /* Individual List Item */
-        .list-item {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            background: transparent;
-        }
-
-        .list-item:hover {
-            background: #f8fbff;
-            transform: translateX(10px);
-        }
-
-        /* Updated Icon Container: Removed radius/background, increased size */
-        .icon-container {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            flex-shrink: 0;
-        }
-
-        /* Icons now blue and larger */
-        .icon-container svg {
-            width: 32px; /* Increased size */
-            height: 32px; /* Increased size */
-            fill: #007bff; /* Changed color to blue */
-        }
-
-        .list-text {
-            font-size: 20px;
-            font-weight: 600;
-            color: #1a365d;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 992px) {
-            .plumbing-icon-list {
-                grid-template-columns: 1fr; /* Stack on tablet/mobile */
-                gap: 15px;
-            }
-            .plumbing-list-wrapper {
-                padding: 30px 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .plumbing-header h2 {
-                font-size: 28px;
-            }
-            .list-text {
-                font-size: 17px;
-            }
-            .icon-container {
-                width: 35px;
-                height: 35px;
-                margin-right: 15px;
-            }
-            .icon-container svg {
-                width: 28px;
-                height: 28px;
-            }
+        .btn-secondary:hover {
+            background-color: var(--whatsapp-green) !important;
+            border-color: var(--whatsapp-green) !important;
+            color: white !important;
         }
     </style>
 </head>
-<body>
+<body class="m-0 p-0 overflow-x-hidden">
 
-    <section class="plumbing-problems-section">
-        <div class="plumbing-container">
+    <!-- Full Width Elementor-style Wrapper -->
+    <section class="hero-bg min-h-screen w-full flex items-center py-20 px-6 lg:px-0">
+        
+        <!-- Boxed Content Area (1120px) -->
+        <div class="content-container">
             
-            <div class="plumbing-header">
-                <h2>Common Plumbing Problems We Fix Daily</h2>
-                <p>Plumbing issues can happen anytime and cause serious inconvenience if not fixed quickly. These are the most common problems we handle for homes and businesses in Westlands.</p>
-            </div>
+            <!-- Width limited to occupy the left side (reducing negative space on the right for the photo) -->
+            <div class="max-w-2xl lg:max-w-[700px]">
+                
+                <!-- Headline - Reduced Brightness/Opacity -->
+                <h1 class="poppins text-white/90 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 tracking-tight">
+                    We help Nairobi-based professionals stay tax-compliant, organized, and stress-free.
+                </h1>
 
-            <div class="plumbing-list-wrapper">
-                <ul class="plumbing-icon-list">
+                <!-- Subheadline - White with light opacity -->
+                <p class="inter text-white/80 text-lg md:text-xl leading-relaxed mb-10 font-light">
+                    Clear accounting and tax support so you can focus on your work.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <!-- Primary CTA - Orange with Blue Hover -->
+                    <a href="#" class="poppins btn-primary bg-[#E67E22] text-white px-10 py-4 rounded-full font-semibold text-center transition-all duration-300 shadow-xl">
+                        Book Consultation
+                    </a>
                     
-                    <li class="list-item">
-                        <div class="icon-container">
-                            <svg viewBox="0 0 24 24"><path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z"/></svg>
-                        </div>
-                        <span class="list-text">Leaking pipes and taps</span>
-                    </li>
-
-                    <li class="list-item">
-                        <div class="icon-container">
-                            <svg viewBox="0 0 24 24"><path d="M12,20A6,6 0 0,1 6,14C6,10 12,3.25 12,3.25C12,3.25 18,10 18,14A6,6 0 0,1 12,20Z"/></svg>
-                        </div>
-                        <span class="list-text">Blocked sinks and drains</span>
-                    </li>
-
-                    <li class="list-item">
-                        <div class="icon-container">
-                            <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6V12L16,14L16.8,12.7L13.5,10.8V6H12Z"/></svg>
-                        </div>
-                        <span class="list-text">Burst water pipes</span>
-                    </li>
-
-                    <li class="list-item">
-                        <div class="icon-container">
-                            <svg viewBox="0 0 24 24"><path d="M9,22H15V20H9V22M12,2C7.03,2 3,6.03 3,11V18H21V11C21,6.03 16.97,2 12,2M12,16H5V11C5,7.13 8.13,4 12,4C15.87,4 19,7.13 19,11V16H12Z"/></svg>
-                        </div>
-                        <span class="list-text">Faulty toilets and flushing systems</span>
-                    </li>
-
-                    <li class="list-item">
-                        <div class="icon-container">
-                            <svg viewBox="0 0 24 24"><path d="M12,3C7.03,3 3,7.03 3,12C3,16.97 7.03,21 12,21C16.97,21 21,16.97 21,12C21,7.03 16.97,3 12,3M12,19C8.13,19 5,15.87 5,12C5,8.13 8.13,5 12,5C15.87,5 19,8.13 19,12C19,15.87 15.87,19 12,19M13,7H11V13H17V11H13V7Z"/></svg>
-                        </div>
-                        <span class="list-text">Low water pressure issues</span>
-                    </li>
-
-                </ul>
+                    <!-- Secondary CTA - Outlined with Green Hover -->
+                    <a href="https://wa.me/yournumber" class="poppins btn-secondary border-2 border-white text-white px-10 py-4 rounded-full font-semibold text-center transition-all duration-300">
+                        Whatsapp Us
+                    </a>
+                </div>
             </div>
+
         </div>
     </section>
 
