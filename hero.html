@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northstar Accounting Services Hero</title>
+    <!-- Font Imports -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --content-max-width: 1120px;
+            --primary-orange: #E67E22;
+            --primary-hover: #1F3A5F;
+            --whatsapp-green: #25D366;
+            /* Deep Bluish Luxury Overlay */
+            --overlay-color: rgba(15, 23, 42, 0.6); 
+        }
+
+        .poppins { font-family: 'Poppins', sans-serif; }
+        .inter { font-family: 'Inter', sans-serif; }
+
+        /* Full-width container logic with bluish overlay */
+        .hero-bg {
+            background: 
+                linear-gradient(90deg, var(--overlay-color) 0%, rgba(15, 23, 42, 0.2) 100%), 
+                url('http://northstar-accounting-services.local/wp-content/uploads/2026/01/North-star.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* 1120px content width constraint */
+        .content-container {
+            max-width: var(--content-max-width);
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Custom Hover Transitions */
+        .btn-primary:hover {
+            background-color: var(--primary-hover) !important;
+            color: white !important;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--whatsapp-green) !important;
+            border-color: var(--whatsapp-green) !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body class="m-0 p-0 overflow-x-hidden">
+
+    <!-- Full Width Elementor-style Wrapper -->
+    <section class="hero-bg min-h-screen w-full flex items-center py-20 px-6 lg:px-0">
+        
+        <!-- Boxed Content Area (1120px) -->
+        <div class="content-container">
+            
+            <!-- Width limited to occupy the left side (reducing negative space on the right for the photo) -->
+            <div class="max-w-2xl lg:max-w-[700px]">
+                
+                <!-- Headline - Reduced Brightness/Opacity -->
+                <h1 class="poppins text-white/90 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 tracking-tight">
+                    We help Nairobi-based professionals stay tax-compliant, organized, and stress-free.
+                </h1>
+
+                <!-- Subheadline - White with light opacity -->
+                <p class="inter text-white/80 text-lg md:text-xl leading-relaxed mb-10 font-light">
+                    Clear accounting and tax support so you can focus on your work.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <!-- Primary CTA - Orange with Blue Hover -->
+                    <a href="#" class="poppins btn-primary bg-[#E67E22] text-white px-10 py-4 rounded-full font-semibold text-center transition-all duration-300 shadow-xl">
+                        Book Consultation
+                    </a>
+                    
+                    <!-- Secondary CTA - Outlined with Green Hover -->
+                    <a href="https://wa.me/yournumber" class="poppins btn-secondary border-2 border-white text-white px-10 py-4 rounded-full font-semibold text-center transition-all duration-300">
+                        Whatsapp Us
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
